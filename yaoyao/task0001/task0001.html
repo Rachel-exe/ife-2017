@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+</head>
+<body>
+	<input type="text" id="inp1" class="inp1">
+	<script>
+		var $=function(name){
+			var type=name.substr(0,1);
+			var eleName=name.substr(1)
+			if(type=='#'){
+				return document.getElementById(eleName);
+			}else if(type=='.'){
+				return document.querySelectorAll(name);
+			}else{
+				return document.getElementsByTagName(name);
+			}
+			
+		}
+
+		function valid(){
+			$('#inp1').onInput=function(){
+				var val=$(this).value;
+				if(val.length)
+			}
+		}
+	</script>
+</body>
+</html>
